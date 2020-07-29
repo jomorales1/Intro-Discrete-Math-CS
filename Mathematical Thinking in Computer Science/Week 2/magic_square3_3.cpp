@@ -70,6 +70,7 @@ void magic_square() {
 }
 
 void method_two() {
+    // TODO: implement
     int goal = 15;
 }
 
