@@ -19,8 +19,10 @@ def generate_permutations(perm, n):
 
 def extend(perm, n):
     if len(perm) == n:
+        global solutions
+        solutions += 1
         print(perm)
-        exit()
+        return
     for k in range(n):
         if k not in perm:
             perm.append(k)
@@ -29,4 +31,7 @@ def extend(perm, n):
             perm.pop()
 
 
-extend(perm = [], n = 20)
+solutions = 0
+n = int(input("Enter n: "))
+extend(perm = [], n = n)
+print("Solutions found: " + str(solutions))
