@@ -2,6 +2,8 @@
 
 using namespace std;
 
+int number_sol = 0;
+
 bool contains(const vector<int>& v, int el) {
     int n = v.size();
     for (int i = 0; i < n; i++) {
@@ -45,6 +47,7 @@ void extend(vector<int>& perm, int n) {
             cout << perm[i] << ", ";
         }
         cout << perm.back() << "]\n";
+        number_sol++;
         return;
     }
     for (int i = 0; i < n; i++) {
@@ -63,5 +66,6 @@ int main() {
     int n;
     cin >> n;
     extend(perm, n);
+    cout << "Solutions found: " << number_sol << "\n";
     return 0;
 }
