@@ -35,8 +35,8 @@ def check_nd():
 def check(x, y):
     if grid[x][y] == 2:
         return check_nd()
-    neighboors = coordinates(x, y)
-    for p in neighboors:
+    neighbors = coordinates(x, y)
+    for p in neighbors:
         if grid[p[0]][p[1]] == 2:
             continue
         if p[0] == x or p[1] == y:

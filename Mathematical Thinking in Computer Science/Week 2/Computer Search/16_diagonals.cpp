@@ -36,8 +36,8 @@ bool check_nd() {
 bool check(int x, int y) {
     if (grid[x][y] == 2)
         return check_nd();
-    vector<pair<int, int>> neighboors = coordinates(x, y);
-    for (auto p: neighboors) {
+    vector<pair<int, int>> neighbors = coordinates(x, y);
+    for (auto p: neighbors) {
         if (grid[p.first][p.second] == 2) {
             continue;
         }
